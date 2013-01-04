@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-0": {
+            "Naneau\\SemVer\\": "Naneau/SemVer/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
