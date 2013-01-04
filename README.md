@@ -36,7 +36,7 @@ if ($version->hasPreRelease()) {
 // Build part ('+build.12345')
 if ($version->hasBuild()) {
     echo $version->getBuild()->getNumber(); // => 12345
-    var_dump($version->getBuild()->getParts()); => array(0 => 'ea4f51');
+    var_dump($version->getBuild()->getParts()); // => array(0 => 'ea4f51');
 }
 
 // Full version echo
