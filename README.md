@@ -78,7 +78,6 @@ descending order of SemVer:
 ```php
 <?php
 
-use Naneau\SemVer\Parser;
 use Naneau\SemVer\Sort;
 
 $sorted = Sort::sort('1.2.1-beta', '1.2.0+build.10', '0.9.29');
