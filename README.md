@@ -81,7 +81,7 @@ descending order of SemVer:
 use Naneau\SemVer\Parser;
 use Naneau\SemVer\Sort;
 
-$sorted = Compare::Sort('1.2.1-beta', '1.2.0+build.10', '0.9.29');
+$sorted = Sort::sort('1.2.1-beta', '1.2.0+build.10', '0.9.29');
 
 echo $sorted[0]; // => 0.9.29
 echo $sorted[1]; // => 1.2.0+build.10
