@@ -40,7 +40,7 @@ if ($version->hasBuild()) {
 }
 
 // Full version echo
-echo $version; // => 1.2.3-alpha.1+build.12345
+echo $version; // => 1.2.3-alpha.1+build.12345.ea4f51
 ```
 
 ### Comparison
