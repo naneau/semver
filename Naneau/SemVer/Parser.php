@@ -1,13 +1,13 @@
 <?php
 /**
- * Version.php
+ * Parser.php
  *
  * @category        Naneau
  * @package         SemVer
  * @subpackage      Parser
  */
 
-namespace Naneau\SemVer\Parser;
+namespace Naneau\SemVer;
 
 use Naneau\SemVer\Parser\Build as BuildParser;
 use Naneau\SemVer\Parser\PreRelease as PreReleaseParser;
@@ -20,7 +20,7 @@ use Naneau\SemVer\Version as SemVerVersion;
 use \InvalidArgumentException as InvalidArgumentException;
 
 /**
- * Version
+ * Parser
  *
  * Full SemVer version parser
  *
@@ -28,7 +28,7 @@ use \InvalidArgumentException as InvalidArgumentException;
  * @package         SemVer
  * @subpackage      Parser
  */
-class Version
+class Parser
 {
     /**
      * Parse a string into a SemVer Version

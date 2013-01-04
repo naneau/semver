@@ -6,7 +6,7 @@
  * @package         SemVer
  */
 
-use Naneau\SemVer\Parser\Version as Parser;
+use Naneau\SemVer\Parser;
 use Naneau\SemVer\Sort as Sorter;
 
 use \PHPUnit_Framework_TestCase as TestCase;

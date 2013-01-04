@@ -1,7 +1,7 @@
 <?php
 
 use Naneau\SemVer\Compare;
-use Naneau\SemVer\Parser\Version as Parser;
+use Naneau\SemVer\Parser;
 
 use \PHPUnit_Framework_TestCase as TestCase;
 

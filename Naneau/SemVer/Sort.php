@@ -8,7 +8,7 @@
 
 namespace Naneau\SemVer;
 
-use Naneau\SemVer\Parser\Version as Parser;
+use Naneau\SemVer\Parser;
 use Naneau\SemVer\Version;
 
 use \InvalidArgumentException as InvalidArgumentException;
