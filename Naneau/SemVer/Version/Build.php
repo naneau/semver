@@ -81,16 +81,11 @@ class Build
      */
     public function setParts($parts)
     {
-        // Sanity check
-        foreach($parts as $part) {
-            if (!ctype_alnum($part)) {
-                throw new InvalidArgumentException(
-                    'Build part "' . $part . '" is not alpha numerical'
-                );
-            }
-        }
+        $this->parts = array();
 
-        $this->parts = $parts;
+        foreach($parts as $part) {
+            $this->addPart($part);
+        }
 
         return $this;
     }
