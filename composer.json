@@ -33,7 +33,7 @@
 
     "autoload": {
         "psr-0": {
-            "Naneau\\SemVer\\": "Naneau/SemVer/"
+            "Naneau\\SemVer\\": "src"
         }
     }
 }
