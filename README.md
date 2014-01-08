@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/naneau/semver.png?branch=master)](https://travis-ci.org/naneau/semver)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/fa3d9982-f1f9-4637-84f2-c3ac460676c7/mini.png)](https://insight.sensiolabs.com/projects/fa3d9982-f1f9-4637-84f2-c3ac460676c7)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/naneau/semver/badges/quality-score.png?s=0d9f184ab5456eab3c9222fd2f53e1defd43d117)](https://scrutinizer-ci.com/g/naneau/semver/)
+[![Code Coverage](https://scrutinizer-ci.com/g/naneau/semver/badges/coverage.png?s=d292f21ffe198272dfc0d96f78750704644d6473)](https://scrutinizer-ci.com/g/naneau/semver/)
 
 This library is a [SemVer](http://semver.org) parser written in PHP. It has a
 solid, fully tested OO API that makes it easy to work with SemVer versions.
