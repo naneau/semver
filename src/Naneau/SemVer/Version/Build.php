@@ -9,6 +9,8 @@
 
 namespace Naneau\SemVer\Version;
 
+use \InvalidArgumentException;
+
 /**
  * Build
  *
