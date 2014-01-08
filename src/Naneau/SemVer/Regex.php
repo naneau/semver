@@ -49,7 +49,7 @@ class Regex
 
         // Match the possible parts of a SemVer
         $matched = preg_match(
-            Regex::$version,
+            self::$version,
             $string,
             $matches
         );
