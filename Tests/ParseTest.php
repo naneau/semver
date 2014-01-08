@@ -24,7 +24,7 @@ class ParseTest extends TestCase
     {
         $v1 = Parser::parse('0.1.1-rc.1');
         $v2 = Parser::parse('5.2.0+build.269.1244d66');
-        //$v2 = Parser::parse('1.111.2-alpha.1235+build.4');
+        $v2 = Parser::parse('1.111.2-alpha.1235+build.4');
         $v3 = Parser::parse('20.0.123+build.6');
 
         // Major
