@@ -1,5 +1,8 @@
 # A decent SemVer library
 
+[![Build Status](https://travis-ci.org/naneau/semver.png?branch=master)](https://travis-ci.org/naneau/semver)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/fa3d9982-f1f9-4637-84f2-c3ac460676c7/mini.png)](https://insight.sensiolabs.com/projects/fa3d9982-f1f9-4637-84f2-c3ac460676c7)
+
 This library is a [SemVer](http://semver.org) parser written in PHP. It has a
 solid, fully tested OO API that makes it easy to work with SemVer versions.
 
