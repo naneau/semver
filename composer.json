@@ -1,6 +1,5 @@
 {
     "name"        : "naneau/semver",
-    "version"     : "0.0.4",
     "description" : "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
     "keywords"    : ["semver", "semantic", "versioning"],
     "homepage"    : "https://github.com/naneau/semver",
