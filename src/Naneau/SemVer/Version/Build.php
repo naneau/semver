@@ -119,14 +119,25 @@ class Build
      **/
     public function __toString()
     {
+        // If there are other parts
         if (count($this->getParts()) > 0) {
-            return implode('.', array(
-                'build.' . $this->getNumber(),
-                implode('.', $this->getParts())
-            ));
+            $parts = array('build');
+
+            // Add number if we have one
+            if ($this->getNumber() !== null) {
+                $parts[] = $this->getNumber();
+            }
+
+            $parts[] = implode('.', $this->getParts());
+
+            return implode('.', $parts);
+        }
+
+        // No number, no parts, no output.
+        if ($this->getNumber() === null) {
+            return '';
         }
 
         return 'build.' . $this->getNumber();
     }
 }
-
