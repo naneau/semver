@@ -99,6 +99,20 @@ class CompareTest extends TestCase
         $this->assertVersionBiggerThan('2.0.2', '0.0.4');
         $this->assertVersionBiggerThan('1.2.3', '1.2.2');
         $this->assertVersionBiggerThan('0.0.1', '0.0.0');
+
+        // Check that versions that are equal are not bigger/smaller
+        $this->assertFalse(
+            Compare::greaterThan(
+                parser::parse('4.0.0'),
+                parser::parse('4.0.0')
+            )
+        );
+        $this->assertFalse(
+            Compare::smallerThan(
+                parser::parse('4.0.0'),
+                parser::parse('4.0.0')
+            )
+        );
     }
 
     /**
