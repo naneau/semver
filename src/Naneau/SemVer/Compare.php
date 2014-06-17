@@ -140,6 +140,11 @@ class Compare
      **/
     public static function greaterThan(Version $v1, Version $v2)
     {
+        // If they are equal, they can not be greater/smaller than each other
+        if (self::equals($v1,  $v2)) {
+            return false;
+        }
+
         // Compare on the major/minor/patch level if we can
         if (!self::versionableEquals($v1, $v2)) {
             return self::versionableGreaterThan($v1, $v2);
