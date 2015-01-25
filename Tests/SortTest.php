@@ -34,7 +34,7 @@ class SortTest extends TestCase
         $v4 = '10.0.1-rc.1+build.12345';
         $v5 = '10.0.2-rc.1+build.12345'; // Biggest
         $v6 = '0.0.4';
-        $v7 = '0.0.01-alpha'; // Smallest
+        $v7 = '0.0.1-alpha'; // Smallest
 
         $sorted = Sorter::sort($v1, $v2, $v3, $v4, $v5, $v6, $v7);
 
