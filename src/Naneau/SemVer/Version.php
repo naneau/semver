@@ -39,6 +39,18 @@ class Version extends Versionable
     private $build;
 
     /**
+     * Original version String
+     *
+     * @var originalVersionString
+     */
+    private $originalVersionString;
+
+    public function setOriginalVersion($version)
+    {
+        $this->originalVersionString = $version;
+    }
+
+    /**
      * Get the pre release version
      *
      * @return PreRelease
@@ -111,19 +123,6 @@ class Version extends Versionable
      **/
     public function __toString()
     {
-        // Start with versionable part
-        $string = parent::__toString();
-
-        // Add pre-release
-        if ($this->hasPreRelease()) {
-            $string .= '-' . $this->getPreRelease();
-        }
-
-        // Add build
-        if ($this->hasBuild()) {
-            $string .= '+' . $this->getBuild();
-        }
-
-        return $string;
+        return $this->originalVersionString;
     }
 }
