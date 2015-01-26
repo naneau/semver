@@ -45,6 +45,11 @@ class Version extends Versionable
      */
     private $originalVersionString;
 
+    /**
+     * Set the original version string for later usage
+     *
+     * @param $version
+     */
     public function setOriginalVersion($version)
     {
         $this->originalVersionString = $version;
