@@ -67,6 +67,7 @@ class Parser
         }
 
         // Return
+        $version->setOriginalVersion($string);
         return $version;
     }
 }
