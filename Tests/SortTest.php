@@ -34,7 +34,7 @@ class SortTest extends TestCase
         $v4 = '10.0.1-rc.1+build.12345';
         $v5 = '10.0.2-rc.1+build.12345'; // Biggest
         $v6 = '0.0.4';
-        $v7 = '0.0.1-alpha'; // Smallest
+        $v7 = '0.0.1-alpha.0'; // Smallest
 
         $sorted = Sorter::sort($v1, $v2, $v3, $v4, $v5, $v6, $v7);
 
@@ -44,32 +44,32 @@ class SortTest extends TestCase
         );
 
         $this->assertEquals(
-            (string) $sorted[0],
-            $v7
+            $v7,
+            (string) $sorted[0]
         );
         $this->assertEquals(
-            (string) $sorted[1],
-            $v3
+	        $v3,
+            (string) $sorted[1]
         );
         $this->assertEquals(
-            (string) $sorted[2],
-            $v6
+	        $v6,
+            (string) $sorted[2]
         );
         $this->assertEquals(
-            (string) $sorted[3],
+	        (string) $sorted[3],
             $v1
         );
         $this->assertEquals(
-            (string) $sorted[4],
-            $v1
+            $v1,
+            (string) $sorted[4]
         );
         $this->assertEquals(
-            (string) $sorted[5],
-            $v4
+            $v4,
+            (string) $sorted[5]
         );
         $this->assertEquals(
-            (string) $sorted[6],
-            $v5
+            $v5,
+            (string) $sorted[6]
         );
     }
 
