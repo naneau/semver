@@ -18,7 +18,7 @@ use \PHPUnit_Framework_TestCase as TestCase;
  * @category        Naneau
  * @package         SemVer
  */
-class VersionTest extends TestCase
+class OriginalVersionTest extends TestCase
 {
     /**
      * Test sort of strings
