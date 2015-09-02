@@ -181,22 +181,6 @@ class Version extends Versionable
         return $next;
     }
 
-    private function ensureBase($base)
-    {
-        if (empty($base)) {
-            return $this;
-        }
-
-        if (is_string($base)) {
-            $base = Parser::parse($base);
-        }
-        elseif (! $base instanceof Version) {
-            throw new InvalidArgumentException("\$base must be of type Version");
-        }
-
-        return $base;
-    }
-
     /**
      * Create a new Version that discards the entity information of build and
      * originalVersionString
@@ -216,6 +200,30 @@ class Version extends Versionable
         }
 
         return $version;
+    }
+
+    /**
+     * Ensure that $base is a Version. Parse it if we must, use ourself if it
+     * is empty.
+     *
+     * @param Verion|string|null $base
+     * @return Version
+     * @throws InvalidArgumentException
+     */
+    private function ensureBase($base)
+    {
+        if (empty($base)) {
+            return $this;
+        }
+
+        if (is_string($base)) {
+            $base = Parser::parse($base);
+        }
+        elseif (! $base instanceof Version) {
+            throw new InvalidArgumentException("\$base must be of type Version");
+        }
+
+        return $base;
     }
 
     /**
