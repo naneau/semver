@@ -139,10 +139,9 @@ class Version extends Versionable
      * @param  Version|string|null $base
      * @return Version
      */
-    public function next(/* $base */)
+    public function next($base = null)
     {
-        $args = func_get_args();
-        $base = $this->ensureBase((count($args)) ? $args[0] : null);
+        $base = $this->ensureBase($base);
 
         // If the base is ahead of this Version then the next version will be
         // the base.
