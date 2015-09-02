@@ -138,10 +138,23 @@ class Version extends Versionable
      *
      * @param  Version|string|null $base
      * @return Version
+     * @throws InvalidArgumentException
      */
     public function next($base = null)
     {
-        $base = $this->ensureBase($base);
+        //  Ensure that $base is a Version. Parse it if we must, use ourself if
+        //  it is empty.
+        if (empty($base)) {
+            $base = $this;
+        }
+        else {
+            if (is_string($base)) {
+                $base = Parser::parse($base);
+            }
+            elseif (! $base instanceof Version) {
+                throw new InvalidArgumentException("\$base must be of type Version");
+            }
+        }
 
         // If the base is ahead of this Version then the next version will be
         // the base.
@@ -200,30 +213,6 @@ class Version extends Versionable
         }
 
         return $version;
-    }
-
-    /**
-     * Ensure that $base is a Version. Parse it if we must, use ourself if it
-     * is empty.
-     *
-     * @param Verion|string|null $base
-     * @return Version
-     * @throws InvalidArgumentException
-     */
-    private function ensureBase($base)
-    {
-        if (empty($base)) {
-            return $this;
-        }
-
-        if (is_string($base)) {
-            $base = Parser::parse($base);
-        }
-        elseif (! $base instanceof Version) {
-            throw new InvalidArgumentException("\$base must be of type Version");
-        }
-
-        return $base;
     }
 
     /**
