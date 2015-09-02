@@ -132,6 +132,27 @@ class Version extends Versionable
     }
 
     /**
+     * Create a new Version that discards the entity information of build and
+     * originalVersionString
+     *
+     * @return Version
+     */
+    public function cleanCopy()
+    {
+        $version = new Version;
+
+        $version->setMajor($this->getMajor());
+        $version->setMinor($this->getMinor());
+        $version->setPatch($this->getPatch());
+
+        if ($this->hasPreRelease()) {
+            $version->preRelease = clone($this->getPreRelease());
+        }
+
+        return $version;
+    }
+
+    /**
      * String representation of this Version
      *
      * @return string
